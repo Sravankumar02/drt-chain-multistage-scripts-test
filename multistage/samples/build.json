@@ -1,0 +1,14 @@
+[
+    {
+        "name": "andromeda",
+        "goUrl": "https://golang.org/dl/go1.20.7.linux-amd64.tar.gz",
+        "sourceUrl": "https://github.com/TerraDharitri/drt-go-chain/archive/refs/tags/v1.9.6.zip",
+        "destinationFolder": "~/drt-binaries/andromeda"
+    },
+    {
+        "name": "barnard",
+        "goUrl": "https://golang.org/dl/go1.23.10.linux-amd64.tar.gz",
+        "sourceUrl": "https://github.com/TerraDharitri/drt-go-chain/archive/refs/tags/v1.10.0.zip",
+        "destinationFolder": "~/drt-binaries/barnard"
+    }
+]

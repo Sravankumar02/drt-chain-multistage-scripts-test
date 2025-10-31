@@ -1,0 +1,72 @@
+{
+    "lanes": [
+        {
+            "name": "shard_0",
+            "workingDirectory": "~/drt-nodes/shard-0",
+            "stages": [
+                {
+                    "name": "andromeda",
+                    "untilEpoch": 4,
+                    "nodeStatusUrl": "http://localhost:8080/node/status",
+                    "configurationArchive": "https://github.com/TerraDharitri/drt-chain-testnet-config/archive/refs/tags/T1.9.6.0.zip",
+                    "bin": "~/drt-binaries/andromeda",
+                    "nodeArguments": [
+                        "--log-save",
+                        "--log-level=*:DEBUG",
+                        "--rest-api-interface=localhost:8080",
+                        "--operation-mode=full-archive",
+                        "--destination-shard-as-observer=0"
+                    ]
+                },
+                {
+                    "name": "barnard",
+                    "untilEpoch": 4294967295,
+                    "nodeStatusUrl": "http://localhost:8080/node/status",
+                    "configurationArchive": "https://github.com/TerraDharitri/drt-chain-testnet-config/archive/refs/tags/T1.10.1.0.zip",
+                    "bin": "~/drt-binaries/barnard",
+                    "nodeArguments": [
+                        "--log-save",
+                        "--log-level=*:DEBUG",
+                        "--rest-api-interface=localhost:8080",
+                        "--operation-mode=full-archive",
+                        "--destination-shard-as-observer=0"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "shard_1",
+            "workingDirectory": "~/drt-nodes/shard-1",
+            "stages": [
+                {
+                    "name": "andromeda",
+                    "untilEpoch": 4,
+                    "nodeStatusUrl": "http://localhost:8081/node/status",
+                    "configurationArchive": "https://github.com/TerraDharitri/drt-chain-testnet-config/archive/refs/tags/T1.9.6.0.zip",
+                    "bin": "~/drt-binaries/andromeda",
+                    "nodeArguments": [
+                        "--log-save",
+                        "--log-level=*:DEBUG",
+                        "--rest-api-interface=localhost:8081",
+                        "--operation-mode=full-archive",
+                        "--destination-shard-as-observer=1"
+                    ]
+                },
+                {
+                    "name": "barnard",
+                    "untilEpoch": 4294967295,
+                    "nodeStatusUrl": "http://localhost:8081/node/status",
+                    "configurationArchive": "https://github.com/TerraDharitri/drt-chain-testnet-config/archive/refs/tags/T1.10.1.0.zip",
+                    "bin": "~/drt-binaries/barnard",
+                    "nodeArguments": [
+                        "--log-save",
+                        "--log-level=*:DEBUG",
+                        "--rest-api-interface=localhost:8081",
+                        "--operation-mode=full-archive",
+                        "--destination-shard-as-observer=1"
+                    ]
+                }
+            ]
+        }
+    ]
+}
